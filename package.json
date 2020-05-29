@@ -1,0 +1,37 @@
+{
+  "name": "@wide/scroll",
+  "version": "2.0.0",
+  "description": "Observe scroll progression and provides helpers for parallax, locking and sticky effects.",
+  "license": "MIT",
+  "author": "Aymeric Assier (https://github.com/myeti)",
+  "contributors": [
+    "Aymeric Assier (https://github.com/myeti)",
+    "Julien Martins Da Costa (https://github.com/jdacosta)"
+  ],
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/wide/scroll.git"
+  },
+  "main": "lib",
+  "engines": {
+    "node": ">=10.13.0"
+  },
+  "scripts": {
+    "build": "babel src/ -d lib/ --presets babel-preset-es2015",
+    "prepare": "rimraf lib/ && npm run build"
+  },
+  "dependencies": {
+    "@wide/dom-observer": "^2.0.0",
+    "@wide/emitter": "^2.0.0",
+    "body-scroll-lock": "^2.6.4",
+    "jump.js": "^1.0.2",
+    "rellax": "^1.12.0",
+    "stickybits": "^3.6.8",
+    "uos": "^1.2.0"
+  },
+  "devDependencies": {
+    "babel-cli": "6.26.0",
+    "babel-preset-es2015": "6.24.1",
+    "rimraf": "^3.0.0"
+  }
+}
