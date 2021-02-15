@@ -1,6 +1,6 @@
 {
   "name": "@wide/scroll",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Observe scroll progression and provides helpers for parallax, locking and sticky effects.",
   "license": "MIT",
   "author": "Aymeric Assier (https://github.com/myeti)",
@@ -21,7 +21,7 @@
     "prepare": "rimraf lib/ && npm run build"
   },
   "dependencies": {
-    "@wide/dom-observer": "^2.0.0",
+    "@wide/dom-observer": "^2.0.1",
     "@wide/emitter": "^2.0.0",
     "body-scroll-lock": "^2.6.4",
     "jump.js": "^1.0.2",
