@@ -1,6 +1,6 @@
 {
   "name": "@wide/scroll",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Observe scroll progression and provides helpers for parallax, locking and sticky effects.",
   "license": "MIT",
   "author": "Aymeric Assier (https://github.com/myeti)",
