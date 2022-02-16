@@ -79,6 +79,41 @@ import { JUMP_CONFIG } from '@wide/scroll'
 JUMP_CONFIG.offset = -20 // top offset for all jump
 ```
 
+You can aslo define config locally by adding HTML attributes:
+```html
+<button
+  data-scrollto="#footer"
+  data-scrollto.duration="1010"
+  data-scrollto.offset="0"
+  data-scrollto.a11y="false"
+  data-scrollto.callback="scrollToCallback"
+  data-scrollto.easing="scrollToEasing"
+>
+  Scroll to footer
+</button>
+```
+```js
+window.scrollToCallback = () => {
+  // Do some stuffs when scroll has been completed
+}
+
+window.scrollToEasing = () => {
+  // My custom easing animation code
+}
+```
+
+> Note: Those parameters will override default (global) parameters.
+
+### Parameters
+| Name | Type | Description | Default value |
+|---|---|---|---|
+| `duration` | `number` | Pass the time the `scrollto()` takes, in milliseconds. | `800` |
+| `offset` | `number` | Offset a `scrollto()`, only if to an element, by a number of pixels. | `-80` |
+| `a11y` | `boolean` | If enabled, and scrolling to an element: add a tabindex to, and focus the element | `true` |
+| `callback` | `function` | Pass a function that will be called after the `scrollto()` has been completed. | `null` |
+| `easing` | `function` | Easing function used to transition the `scrollto()`. | `null` |
+
+More informations on [`Jump.js` documentation](https://github.com/callmecavs/jump.js#options).
 
 ## Locker
 
@@ -137,7 +172,6 @@ import parallax from '@wide/scroll/lib/parallax'
 const el = document.querySelector('.something')
 parallax(el, { speed: .4 })
 ```
-
 
 ## Sticky
 
