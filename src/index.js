@@ -78,7 +78,7 @@ export function scrollTo(target, options = {}) {
  * @param {DOMStringMap} dataset 
  * @return {Object} Jump options
  */
-export function getOptions(dataset) {
+function getOptions(dataset) {
   const options = {}
 
   if (dataset && typeof dataset === 'object') {
@@ -104,7 +104,7 @@ export function getOptions(dataset) {
  * @param {string} dataName 
  * @return {string|null} Jump option name
  */
-export function getOptionName(dataName) {
+function getOptionName(dataName) {
   const dataKeywordSeparator = dataKeyword + dataSeparator
 
   // If an option is setted...
@@ -125,7 +125,9 @@ export function getOptionName(dataName) {
  * @param {string} optionValue 
  * @return {any} Value formatted
  */
-export function getOptionValue(optionName, optionValue) {
+function getOptionValue(optionName, optionValue) {
+  if (!optionName) return null
+
   switch (JUMP_CONFIG_TYPE[optionName]) {
     case 'boolean':
       return optionValue === 'true'
